@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="codemirror/lib/codemirror.js"></script>
+    <link href="codemirror/lib/codemirror.css" rel="stylesheet"/>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <link href="codemirror/theme/dracula.css" rel="stylesheet"/>
+</head>
+<body>
+    <textarea rows="4" cols="50" id="editor">Write your circuit below
+    </textarea>
+    <script>
+        let myTextArea = document.getElementById('editor')
+        let editor = CodeMirror.fromTextArea(myTextArea,
+            {
+                mode: "xml",
+                theme: "dracula",
+                lineNumbers: true,
+            });
+        editor.setSize("33%", 500);
+    </script>
+    <script language="javascript" type="module" src="./js/main.js"></script>
+</body>
+</html>
